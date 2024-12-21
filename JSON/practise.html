@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Practise Set </title>
+   <style>
+      #my-button{
+         height: 40px;
+         width: 40px;
+         border: none;
+         border-radius: 7px;
+         font-size: 20px;
+      }
+      .odd{
+         background-color: aqua;
+      }
+      .even{
+         background-color: yellowgreen;
+      }
+   </style>
+</head>
+<body>
+   
+   <h4 id="greeting"></h4>
+
+   <button id="my-button" onclick="buttonOnClick();"></button>
+   <script>
+      function doGreetingsTo(personName = 'dear'){
+         let date = new Date();
+         let hours = date.getHours();
+         let heading = document.querySelector('#greeting');
+         if(hours<12 && hours>5){
+            heading.innerText = `Good Morning ${personName}`;
+         } else if(hours >12 && hours <18){
+            heading.innerText = `Good Afternoon ${personName}`;
+         } else {
+            heading.innerText = `Good Night ${personName}`;
+         }
+      }
+      doGreetingsTo();
+
+
+
+      
+      let noOftimesClicked = localStorage.getItem('noOftimesClicked') || 0;
+      function buttonOnClick(){
+         noOftimesClicked++;
+         localStorage.setItem('noOftimesClicked',noOftimesClicked);
+         updateButton();
+      }
+
+      function updateButton(){
+         let button = document.querySelector('#my-button');
+         if(noOftimesClicked%2===0){
+            button.classList.add('even');
+            button.classList.remove('odd');
+         } else{
+            button.classList.add('odd');
+            button.classList.remove('even');
+         }
+         button.innerText = noOftimesClicked;
+      }
+      updateButton();
+   </script>
+</body>
+</html>

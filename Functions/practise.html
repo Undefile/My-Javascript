@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Practise set</title>
+</head>
+<body>
+   <script>
+      //Function to checck given number is even or odd
+      Check(44);
+      function Check(num){
+         if (num % 2 == 0) {
+            console.log(num + " is an even number.");
+         }
+         else {
+            console.log(num + " is a odd number.");
+         }     
+      }
+
+      //Function to print larger number between two numbers
+      function Larger(num1, num2) {
+         if (num1 > num2) {
+            console.log(`${num1} is larger than ${num2}.`);
+         } else{
+            console.log(`${num2} is larger than ${num1}.`);
+         }
+      }
+      Larger(23,4);
+
+      //Function to convert celsius into fahrenheit
+      let Celsius = 12;
+      let result = Convert(Celsius);
+      function Convert(celsius){
+         let fahrenheit = (9/5) * celsius + 32;
+         return fahrenheit;
+      }
+      console.log(`${Celsius}C is ${result}F in Fahrenheit.`);
+
+   </script>
+</body>
+</html>

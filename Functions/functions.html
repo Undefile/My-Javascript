@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Functions</title>
+</head>
+<body>
+   <script>
+      let age = 21;
+      printAge();
+      function printAge(){
+         console.log(`Your age is ${age}`);
+      }
+      age = 36;
+      printAge();
+      age = 74
+      printAge();
+
+      //return statement
+      function generateMove(){
+         let random = Math.random();
+         let randomMove = random*3;
+         console.log(`Your random move is:`);
+         return randomMove;
+      }
+      console.log(generateMove());
+      console.log(generateMove());
+      console.log(generateMove());
+      console.log(generateMove());
+      console.log(generateMove());
+
+      function Sum(a,b){
+         let sum = a+b;
+         return sum;
+      }
+      let result = Sum(11,33);
+      console.log(result);
+
+      function greeting(name = `Pyaare`){    //if paramter isnt provided pyaare will be default  name.
+         console.log(`Namaste ${name} Uncle!`);
+      }
+      greeting();
+   </script>
+</body>
+</html>

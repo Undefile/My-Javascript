@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise set</title>
+  </head>
+  <body>
+    <script>
+      //Create a object to represent a product of myntra
+      let product = {
+         name : 'Nike Air Force 1',
+         size : '39',
+         price : 5999.99,
+         'delivery-time' : 'Same day',
+      };
+      let newProduct = product;     //creating references of original product and change in refrence will change the product too
+      console.log(product);
+      newProduct.size = '40';
+      newProduct.price = 'Rs.6999.99';
+      console.log(product);
+      newProduct.size = '45';
+      newProduct.price = 'Rs.7999.99';
+      console.log(product);
+
+      console.log(product['delivery-time']);
+
+      let obj = {
+         message : 'Good Job!',
+         status :  'Complete',
+      };
+      console.log(obj);
+      let {message,status} = obj;
+      console.log(message);
+      console.log(status);
+
+      //Compare 2 products with function isProductIdentical
+      let product1 = {
+         name : 'Nike Air Force 1',
+         size : '34',
+         price : 5999.99,
+         'delivery-time' : 'Same day',
+      };
+
+      let product2 = {
+         name : 'Nike Air Force 1',
+         size : '39',
+         price : 5999.99,
+         'delivery-time' : 'Same day',
+      };
+
+      function isProductIdentical(product1,product2)
+      {
+         if(typeof product1 !== 'object' || typeof product2 !== 'object'){
+            console.warn('Parameter passes was not object!');
+            
+            return false;
+         }
+
+         if(product1 == product2){
+            console.log('Product is same!')
+            return true;
+         }
+
+         if (product1.name === product2.name &&
+         product1.size === product2.size &&
+         productt1.price === product2.price){
+            console.log('Product is not same!');
+            return true;
+         } 
+         else{
+            console.log('Product is same!')
+            return false;
+         }
+      }
+
+      console.log(isProductIdentical(product1,product2));
+      console.log(isProductIdentical(product1,product1));
+      console.log(isProductIdentical(product2,product2));
+    </script>
+  </body>
+</html>

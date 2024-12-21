@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Scope of Variable</title>
+</head>
+<body>
+   
+   <script>
+      let age = 14;
+      let userMessage;
+      if(age > 18){
+         userMessage = 'You can drive!';
+         //console.log(userMessage);
+      }
+      else{
+         userMessage = `You can't drive!`;
+         //console.log(userMessage);
+      }
+      console.log(userMessage);
+
+      //userMessage variable is initiated inside the curly brackets so its scope is between those curly brackets
+      //it will give error if we use it outside  those brackets.
+      //we can use console.log() inside each brackets or we can initiate the userMessage out of the brackets 1st to not get error.
+   </script>
+</body>
+</html>

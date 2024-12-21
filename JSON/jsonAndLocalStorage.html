@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>JSON</title>
+</head>
+<body>
+   <script>
+      let product = {
+         name: 'Jeans',
+         price: 1800,
+         size: 'Medium',
+         rating :{
+            stars : 4.3/5,
+            noOfReviews : 673,
+         },
+      };
+      console.log(typeof product);
+      console.log(product);
+
+      //JSON is used to stringify the object and vicevers.
+
+      let str = JSON.stringify(product); //this will stringify the product.
+      console.log(typeof str);
+      console.log(str);
+
+      //now if we want to change the string in vicevers we can use
+      let newProduct = JSON.parse(str);
+      console.log(typeof newProduct);
+      console.log(newProduct);
+
+      //LOCAL STORAGE: browser internal storage which saves from browser refresh
+      //setItem : set the item in storage
+      // getItem : get the item from local storage
+      let details = {
+         name : 'Kushal',
+         age : 19,
+         address : 'Pokhara',
+         college : 'Pokhara University',
+      };
+
+      localStorage.setItem('Name','Kushal');
+      //Name is key and Kushal is value.
+      localStorage.setItem('Address','Pokhara');
+      console.log(localStorage.getItem('Name'));
+      //now the name has been saved for permanently in browser storage
+
+      localStorage.setItem('Details',JSON.stringify(details));
+      console.log(details);
+
+      let details1 = JSON.parse(localStorage.getItem('details'));
+      console.log(details1);
+      localStorage.clear();
+   </script>
+</body>
+</html>

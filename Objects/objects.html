@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objects</title>
+ </head>
+ <body>
+   <script>
+      // let product = {
+      //    company : 'Gucci',
+      //    price : 18940,
+      //    item_name : 'Bag',
+      //    displayPrice: function(){
+      //     console.log(`The price of product is: Rs.${this.price}`);
+      //    }
+      // };
+      // console.log(product);
+      // console.log(product.item_name);
+      // delete product.company;
+      // console.log(product);
+
+      // product.displayPrice();
+
+      //AUTOBOXING
+      // console.log('Visca Barca Visca Catalyuna'.length);
+      // console.log('Visca Barca Visca Catalyuna'.toUpperCase());
+      // console.log('Visca Barca Visca Catalyuna'.replace('Barca','Barcelona'));
+
+      let product = {
+         company : 'Gucci',
+         price : 18940,
+         item_name : 'Bag',
+         displayPrice: function(){
+          console.log(`The price of product is: Rs.${this.price}`);
+         }
+      };
+      //object destructuring
+      let {company,price} = product;
+      console.log(company);
+      console.log(price);
+   </script>
+ </body>
+ </html>
